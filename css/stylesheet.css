@@ -1,23 +1,31 @@
 html, body {
   width: 100%;
   height: auto;
-  background-color: #F5F7FA;
+  /* background-color: #F5F7FA; */
+  background-color: white;
   padding: 0;
   margin: 0;
   position: absolute;
+  font-family: helvetica;
 }
 
 h1 {
   font-family: helvetica;
-  font-size: 3rem;
+  font-size: 2.2rem;
   color: black;
 }
 
 h2 {
   font-family: helvetica;
-  text-align: center;
   font-size: 1.5rem;
   color: black;
+}
+
+h3 {
+  font-family: helvetica;
+  font-size: 1.5rem;
+  color: black;
+  font-style: italic;
 }
 
 p {
@@ -65,7 +73,7 @@ nav a {
   padding: 0;
 }
 
-.navButtonA {
+.navButtonLogin {
   font-size: 1.1rem;
   color: white;
   background-color: rgb(50, 186, 155);
@@ -78,7 +86,7 @@ nav a {
   float: right;
 }
 
-.navButtonB {
+.navButtonJoin {
   font-size: 1.1rem;
   color: white;
   background-color: rgb(81,135,198);
@@ -91,7 +99,7 @@ nav a {
 
 .welcome {
   width: 100%;
-  height: 1300px;
+  height: 800px;
   /*background-image: url("../img/IMG_0330.jpg");
   background-size: cover;*/
   background-color: white;
@@ -100,14 +108,32 @@ nav a {
   margin: 0;
 }
 
-.title{
+.welcome-container {
   position: relative;
   left: 120px;
+  right: 120px;
   top: 120px;
-  height: 300px;
-  width: 400px;;
+  height: 600px;
+  width: 1500px;
   margin: 0;
-  z-index: 2;
+}
+
+.title{
+  position: relative;
+  float: left;
+  height: 300px;
+  width: 400px;
+  margin: 0;
+}
+
+.landing-image {
+  position: relative;
+  float: right;
+  margin-right: 70px;
+}
+
+.landing-image img {
+  border-radius: 50%;
 }
 
 .brandAsset {
@@ -116,7 +142,6 @@ nav a {
   width: 100%;
   background-image: url('../img/brand_asset_line.png');
   background-size: cover;
-  margin-top: 250px;
 }
 
 input:hover{
@@ -129,16 +154,21 @@ input:focus{
 .button {
   position: relative;
   font-size: 24px;
-  color: rgb(81,135,198);
+  color: black;
   background-color: white;
-  margin-top: 15px;
+  margin-top: 150px;
   height: 50px;
   width: auto;
   border-width: 2px;
   border-radius: 3px;
-  border-color: rgb(50, 186, 155);
+  border-color: black;
   cursor: pointer;
   float: left;
+}
+
+.button:hover {
+  color: rgb(50, 186, 155);
+  border-color: rgb(50, 186, 155);
 }
 
 .h1container {
@@ -146,46 +176,199 @@ input:focus{
   margin-bottom: 50px;
 }
 
-.container {
+.containerFeatures {
   display: grid;
-	grid-template-areas: "content content" "header header" "left right" "footer footer";
+	grid-template-areas: "oneA oneB" "twoA twoB" "threeA threeB" "fourA fourB";
 	grid-template-columns: 50% 50%;
-	grid-template-rows: 3px 1200px 800px 300px;
-  max-width: 90%;
+	grid-template-rows: 400px 400px 400px 400px;
+  max-width: 80%;
   height: auto;
   position: relative;
   margin: 0px auto;
   grid-gap: 10px;
   justify-content: center;
   background-color: white;
-  box-shadow: 3px 3px 2px #E6E9ED;
+  /* box-shadow: 3px 3px 2px #E6E9ED; */
   border-radius: 5px;
   overflow: hidden;
 }
 
-.content {
-  grid-area: content;
-  position: relative;
+.image-helper {
+  height: 100%;
 }
 
-header {
-  grid-area: header;
+.oneA {
+  grid-area: oneA;
   position: relative;
   text-align: center;
 }
 
+.oneA img {
+  position: relative;
+  top: 90px;
+}
 
-.left {
+.oneB {
+  grid-area: oneB;
+  position: relative;
+  padding: 20px;
+}
+
+.twoA {
+  grid-area: twoA;
+  position: relative;
+  padding: 40px;
+}
+
+.twoB {
+  grid-area: twoB;
+  position: relative;
+  text-align: center;
+}
+
+.twoB img {
+  position: relative;
+  top: 90px;
+}
+
+.threeA {
+  grid-area: threeA;
+  position: relative;
+  padding: 40px;
+}
+
+.threeA img {
+  position: relative;
+  top: 90px;
+}
+
+.threeB {
+  grid-area: threeB;
+  position: relative;
+}
+
+.fourA {
+  grid-area: fourA;
+  position: relative;
+  padding: 40px;
+}
+
+.fourB {
+  grid-area: fourB;
+  position: relative;
+  text-align: center;
+}
+
+.fourB img {
+  position: relative;
+  top: 90px;
+}
+
+.experts {
+  position: relative;
+  height: 200px;
+  background-color: rgb(81,135,198);
+  color: white;
+  padding: 25px;
+  overflow: hidden;
+}
+
+.experts p {
+  color: white;
+}
+
+.experts ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.experts ul li:before {
+  content: '✓';
+}
+
+.containerStart {
+  display: grid;
+	grid-template-areas: "solo quiz" ;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 500px;
+  max-width: 80%;
+  height: auto;
+  position: relative;
+  margin: 0px auto;
+  grid-gap: 10px;
+  justify-content: center;
+  background-color: white;
+  /* box-shadow: 3px 3px 2px #E6E9ED; */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.solo {
 	grid-area: left;
   position: relative;
 }
 
-.right {
+.quiz {
 	grid-area: right;
   position: relative;
 }
 
 footer {
-	grid-area: footer;
   position: relative;
+  height: 500px;
+  background-color: rgb(50, 186, 155);
+  padding: 40px;
+  color: white;
+}
+
+footer p {
+  color: white;
+}
+
+
+.item-1,
+.item-2,
+.item-3 {
+	position: absolute;
+  display: block;
+	top: 4em;
+
+  width: 100%;
+
+  font-size: 2em;
+
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+.item-1{
+	animation-name: anim-1;
+}
+
+.item-2{
+	animation-name: anim-2;
+}
+
+.item-3{
+	animation-name: anim-3;
+}
+
+@keyframes anim-1 {
+	0%, 8.3% { left: -100%; opacity: 0; }
+  8.3%,25% { left: 25%; opacity: 1; }
+  33.33%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 33.33% { left: -100%; opacity: 0; }
+  41.63%, 58.29% { left: 25%; opacity: 1; }
+  66.66%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 66.66% { left: -100%; opacity: 0; }
+  74.96%, 91.62% { left: 25%; opacity: 1; }
+  100% { left: 110%; opacity: 0; }
 }
