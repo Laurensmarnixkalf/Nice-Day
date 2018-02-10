@@ -7,31 +7,32 @@ html, body {
   margin: 0;
   position: absolute;
   font-family: helvetica;
+  color: #5c5c5c;
 }
 
 h1 {
   font-family: helvetica;
   font-size: 2.2rem;
-  color: black;
+  color: #5c5c5c;
 }
 
 h2 {
   font-family: helvetica;
   font-size: 1.5rem;
-  color: black;
+  color: #5c5c5c;
 }
 
 h3 {
   font-family: helvetica;
   font-size: 1.5rem;
-  color: black;
+  color: #5c5c5c;
   font-style: italic;
 }
 
 p {
   font-family: helvetica;
   text-align: center;
-  color: black;
+  color: #5c5c5c;
   font-size: 1.5rem;
 }
 
@@ -39,7 +40,20 @@ a {
   font-family: helvetica;
   text-align: center;
   color: black;
-  text-transform: uppercase;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li a {
+  font-family: helvetica;
+  text-align: center;
+  color: #5c5c5c;
+}
+
+li a:hover {
+  color: rgb(81,135,198)
 }
 
 a:hover {
@@ -163,7 +177,7 @@ input:focus{
   border-radius: 3px;
   border-color: black;
   cursor: pointer;
-  float: left;
+  /* float: left; */
 }
 
 .button:hover {
@@ -289,7 +303,7 @@ input:focus{
 
 .containerStart {
   display: grid;
-	grid-template-areas: "solo quiz" ;
+	grid-template-areas: "solo quiz";
 	grid-template-columns: 50% 50%;
 	grid-template-rows: 500px;
   max-width: 80%;
@@ -305,18 +319,20 @@ input:focus{
 }
 
 .solo {
-	grid-area: left;
+	grid-area: solo;
   position: relative;
 }
 
 .quiz {
-	grid-area: right;
+	grid-area: quiz;
   position: relative;
+  text-align: center;
 }
 
 footer {
   position: relative;
-  height: 500px;
+  text-align: left;
+  height: 400px;
   background-color: rgb(50, 186, 155);
   padding: 40px;
   color: white;
@@ -326,6 +342,51 @@ footer p {
   color: white;
 }
 
+.containerFooter {
+  display: grid;
+	grid-template-areas: "one two three four five six";
+	grid-template-columns: 16% 16% 16% 16% 16% 16%;
+	grid-template-rows: 300px;
+  max-width: 90%;
+  height: auto;
+  position: relative;
+  margin: 0px auto;
+  grid-gap: 10px;
+  background-color: rgb(50, 186, 155);
+  /* box-shadow: 3px 3px 2px #E6E9ED; */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.one {
+  grid-area: one;
+  position: relative;
+}
+
+.two {
+  grid-area: two;
+  position: relative;
+}
+
+.three {
+  grid-area: three;
+  position: relative;
+}
+
+.four {
+  grid-area: four;
+  position: relative;
+}
+
+.five {
+  grid-area: five;
+  position: relative;
+}
+
+.six {
+  grid-area: six;
+  position: relative;
+}
 
 .item-1,
 .item-2,
